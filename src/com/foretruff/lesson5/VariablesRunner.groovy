@@ -21,7 +21,7 @@ class VariablesRunner {
         def value = 5
         BigInteger value2 = 36G
         BigDecimal value3 = 3.6G
-        new SqlDate()
+        new SqlDate(1)
     }
 
 }
