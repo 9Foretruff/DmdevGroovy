@@ -12,5 +12,6 @@ assert 2**3 == 8
 def result = (3 / 2) as Integer
 
 println result <= 29
+println result === 1
 println result * 130 === 130
 println result <=> 130
