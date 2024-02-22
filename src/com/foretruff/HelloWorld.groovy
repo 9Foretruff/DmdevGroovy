@@ -9,7 +9,7 @@ class HelloWorld {
 //  PackageScope
     static void main(String[] args) {
         String value = "Hello world!"
-        Class<String> clazz = value.getClass();
+        Class<String> clazz = value.getClass()
         assert clazz == String.class
         println "Hello world!"
         println clazz.getClassLoader()
