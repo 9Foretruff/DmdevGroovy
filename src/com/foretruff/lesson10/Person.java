@@ -7,8 +7,13 @@ public class Person {
         return id;
     }
 
-    public boolean asBoolean(){
+    public boolean asBoolean() {
         return id > 10;
+    }
+
+    public boolean isCase(Object switchValue) {
+        System.out.println("invoke isCase: " + switchValue);
+        return false;
     }
 
     public Person(Integer id) {
