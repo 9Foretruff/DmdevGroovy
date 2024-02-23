@@ -17,7 +17,6 @@ class RangeRunner {
         ('a'..'d').each { println it }
         (MO..FR).each { println it }
         (FR..MO).each { println it }
-
     }
 
 }
