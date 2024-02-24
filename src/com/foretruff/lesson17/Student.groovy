@@ -12,7 +12,7 @@ import groovy.util.logging.Slf4j
 @TupleConstructor
 @EqualsAndHashCode
 //@Canonical == all 3
-@Immutable
+//@Immutable
 @Builder
 //@Slf4j
 class Student implements WIthId {
@@ -40,6 +40,21 @@ class Student implements WIthId {
     def propertyMissing(String name) {
         println "misiing property: $name"
         "Default value"
+    }
+
+    def getInfo() {
+        Closure closure = {
+            println thisObject // == this
+            println owner
+            println delegate
+            Closure second = {
+                println thisObject // == this
+                println owner
+                println delegate
+            }
+            second()
+        }
+        closure
     }
 
 }
