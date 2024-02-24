@@ -31,4 +31,15 @@ class Student implements WIthId {
 //                .build()
     }
 
+    def methodMissing(String name, Object arguments) {
+        println "Misiing method $name is invoked: $arguments"
+        def field = name - "findBy"
+        println "select * from user where $field = ${arguments[0]}"
+    }
+
+    def propertyMissing(String name) {
+        println "misiing property: $name"
+        "Default value"
+    }
+
 }
